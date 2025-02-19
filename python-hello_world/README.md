@@ -2,3 +2,4 @@
 task, is about executing file in python
 task1, is about write a script runs python code
 task2, writhing python script and print
+task3, using f string
