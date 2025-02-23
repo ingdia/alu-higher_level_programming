@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# This script prints a welcome message
 str1 = "Holberton"
 str2 = "School"
-print("Welcome to " + str1 + " " + str2 + "!")
+# This line prints the welcome message
+print(f"Welcome to {str1} {str2}!")
