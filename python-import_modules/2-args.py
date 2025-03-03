@@ -9,7 +9,7 @@ def print_arguments():
     
     # Print the number of arguments with proper grammar
     if num_args == 1:
-        print(f"{num_args} argument:", end="")
+        print(f"{num_args} argument", end="")
     else:
         print(f"{num_args} arguments", end="")
     
