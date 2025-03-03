@@ -5,11 +5,12 @@ def uppercase(str):
     Args:
         str: The input string.
     """
+    result = ""
     for char in str:
         ascii_val = ord(char)
         if ord('a') <= ascii_val <= ord('z'):
             uppercase_val = ascii_val - 32
-            print("{:c}".format(uppercase_val), end="")
+            result += chr(uppercase_val)
         else:
-            print(char, end="")
-    print()  # Print a newline at the end
+            result += char
+    print(result)
