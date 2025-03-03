@@ -1,15 +1,18 @@
 #!/usr/bin/python3
-import sys
+import hidden_4
+
+
+def print_names():
+    # Get all names defined in the module
+    names = dir(hidden_4)
+
+    # Filter out names starting with '__' and sort alphabetically
+    filtered_names = sorted([name for name in names if not name.startswith('__')])
+
+    # Print each name
+    for name in filtered_names:
+        print(name)
+
 
 if __name__ == "__main__":
-    argc = len(sys.argv) - 1
-    
-    if argc == 0:
-        print("0 arguments.")
-    elif argc == 1:
-        print("1 argument:")
-    else:
-        print("{} arguments:".format(argc))
-    
-    for i in range(1, argc + 1):
-        print("{}: {}".format(i, sys.argv[i]))
+    print_names()
