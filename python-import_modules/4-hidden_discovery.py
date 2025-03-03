@@ -7,7 +7,8 @@ def print_names():
     names = dir(hidden_4)
 
     # Filter out names starting with '__' and sort alphabetically
-    filtered_names = sorted([name for name in names if not name.startswith('__')])
+    filtered_names = sorted([name for name in names 
+                            if not name.startswith('__')])
 
     # Print each name
     for name in filtered_names:
