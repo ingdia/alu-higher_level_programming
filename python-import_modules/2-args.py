@@ -8,15 +8,15 @@ def print_arguments():
     
     # Print the number of arguments with proper grammar
     if num_args == 1:
-        print(f"Number of argument(s): {num_args} argument:", end="")
+        print(f"{num_args} argument:", end="")
     else:
-        print(f"Number of argument(s): {num_args} arguments:", end="")
+        print(f"{num_args} arguments:", end="")
     
     # Print : or . depending on if there are arguments
     if num_args == 0:
         print(".")
     else:
-        print(":")
+        print("")
     
     # Print each argument with its position
     for i, arg in enumerate(args, 1):
