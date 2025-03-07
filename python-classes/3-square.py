@@ -18,7 +18,6 @@ class Square:
         __size (int): The size of the square, must be a non-negative integer.
     """
 
-
     def __init__(self, size=0):
         """Initializes a Square instance.
 
@@ -34,7 +33,6 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size  # Private instance attribute
-
 
     def area(self):
         """Calculates the area of the square.
