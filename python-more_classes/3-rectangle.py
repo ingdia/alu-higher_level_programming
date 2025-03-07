@@ -108,4 +108,4 @@ class Rectangle:
         Returns:
             str: A string representation of the rectangle object.
         """
-        return f"{self.__class__.__name__}({self.__width}, {self.__height})"
+        return super().__repr__()  # Use the default representation
