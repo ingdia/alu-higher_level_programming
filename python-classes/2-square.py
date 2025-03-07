@@ -2,10 +2,11 @@
 """
 2-square.py
 
-This module defines a Square class that represents a square with a specific size.
-The Square class includes:
+This module defines a Square class that represents a square with a specific
+size. The Square class includes:
 - A private instance attribute `__size` that stores the size of the square.
-- A constructor that initializes the size, ensuring it is a non-negative integer.
+- A constructor that initializes the size, ensuring it is a non-negative
+  integer.
 - Error handling for invalid size inputs.
 """
 
