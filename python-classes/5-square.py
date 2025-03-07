@@ -1,6 +1,6 @@
-#!/usr/bin/python3
+#!?uar/bin/python3
 """
-4-square.py
+5-square.py
 
 This module defines a Square class that represents a square with a specific
 size. The Square class includes:
@@ -9,6 +9,7 @@ size. The Square class includes:
   integer.
 - A constructor that initializes the size.
 - A method to calculate the area of the square.
+- A method to print the square using the '#' character.
 """
 
 
@@ -64,3 +65,14 @@ class Square:
             int: The area of the square.
         """
         return self.__size ** 2  # Area calculation
+
+    def my_print(self):
+        """Prints the square using the '#' character.
+
+        If size is 0, prints an empty line.
+        """
+        if self.__size == 0:
+            print("")  # Print an empty line
+        else:
+            for _ in range(self.__size):
+                print("#" * self.__size)  # Print each row of the square
