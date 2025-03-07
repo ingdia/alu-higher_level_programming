@@ -1,11 +1,6 @@
 #!/usr/bin/python3
-"""
-This module defines a Rectangle class.
+"""This module defines a Rectangle class."""
 
-The Rectangle class represents a rectangle defined by its width and height.
-It includes methods to calculate the area and perimeter, as well as
-methods for string representation and comparison of rectangle instances.
-"""
 
 class Rectangle:
     """A class that defines a rectangle by its width and height.
@@ -138,4 +133,16 @@ class Rectangle:
             rect_2 (Rectangle): The second rectangle.
 
         Raises:
-            TypeError: If rect_1
+            TypeError: If rect_1 or rect_2 is not an instance of Rectangle.
+
+        Returns:
+            Rectangle: The rectangle with the larger area, or rect_1 if equal.
+        """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        return rect_2
