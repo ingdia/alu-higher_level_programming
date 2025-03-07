@@ -2,16 +2,16 @@
 """
 6-square.py
 
-This module defines a Square class that represents a square with a specific 
+This module defines a Square class that represents a square with a specific
 size and position. The Square class includes:
 - A private instance attribute `__size` that stores the size of the square.
-- A private instance attribute `__position` that stores the position of the 
+- A private instance attribute `__position` that stores the position of the
   square.
-- Properties to retrieve and set the size and position, ensuring they are 
+- Properties to retrieve and set the size and position, ensuring they are
   valid.
 - A constructor that initializes the size and position.
 - A method to calculate the area of the square.
-- A method to print the square using the '#' character, considering the 
+- A method to print the square using the '#' character, considering the
   position.
 """
 
@@ -21,7 +21,7 @@ class Square:
 
     Attributes:
         __size (int): The size of the square, must be a non-negative integer.
-        __position (tuple): The position of the square, must be a tuple of 
+        __position (tuple): The position of the square, must be a tuple of
         two positive integers.
     """
 
@@ -33,9 +33,9 @@ class Square:
             position (tuple): The position of the square. Defaults to (0, 0).
 
         Raises:
-            TypeError: If size is not an integer or if position is not a 
+            TypeError: If size is not an integer or if position is not a
             tuple of 2 positive integers.
-            ValueError: If size is less than 0 or if position values are 
+            ValueError: If size is less than 0 or if position values are
             not positive integers.
         """
         self.size = size  # Use the setter to initialize size
@@ -102,7 +102,7 @@ class Square:
         return self.__size ** 2  # Area calculation
 
     def my_print(self):
-        """Prints the square using the '#' character, considering the 
+        """Prints the square using the '#' character, considering the
         position.
 
         If size is 0, prints an empty line.
