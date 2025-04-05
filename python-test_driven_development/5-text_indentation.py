@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-5-text_indentation.py
+text_indentation.py
 
 This module contains a function that prints text with two new lines
 after each of the specified characters: ., ?, and :.
