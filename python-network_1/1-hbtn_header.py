@@ -10,6 +10,7 @@ header of the response.
 import urllib.request
 import sys
 
+
 def fetch_x_request_id(url):
     """Fetches the X-Request-Id from the response header."""
     with urllib.request.urlopen(url) as response:
