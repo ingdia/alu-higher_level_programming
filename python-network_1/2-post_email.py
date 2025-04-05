@@ -18,6 +18,7 @@ The server is expected to respond with a message that includes the email sent.
 import urllib.request
 import sys
 
+
 if __name__ == "__main__":
     # Get the URL and email from command line arguments
     url = sys.argv[1]
