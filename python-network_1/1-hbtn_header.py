@@ -1,24 +1,22 @@
 #!/usr/bin/python3
 """
-1-hbtn_header.py
+0-hbtn_status.py
 
-This script takes a URL as an argument, sends a request to the URL,
-and displays the value of the X-Request-Id variable found in the
-header of the response.
+This script fetches the status from the URL https://alu-intranet.hbtn.io/status
+and displays the response body, including the type, content, and UTF-8 content.
 """
 
 import urllib.request
-import sys
-
-
-def fetch_x_request_id(url):
-    """Fetches the X-Request-Id from the response header."""
-    with urllib.request.urlopen(url) as response:
-        # Get the value of the X-Request-Id header
-        x_request_id = response.getheader('X-Request-Id')
-        print(x_request_id)
 
 if __name__ == "__main__":
-    # Get the URL from the command line arguments
-    url = sys.argv[1]
-    fetch_x_request_id(url)
+    url = "https://alu-intranet.hbtn.io/status"
+
+    # Use a with statement to open the URL
+    with urllib.request.urlopen(url) as response:
+        body = response.read()
+
+    # Display the response details
+    print("Body response:")
+    print(f"\t- type: {type(body)}")
+    print(f"\t- content: {body}")
+    print(f"\t- utf8 content: {body.decode('utf-8')}")
