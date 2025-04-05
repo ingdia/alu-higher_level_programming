@@ -1,7 +1,17 @@
 #!/usr/bin/python3
 """
-This script fetches the status from the specified URL
-and displays the response body in a formatted manner.
+0-hbtn_status.py
+
+This script fetches the status from the URL 'https://alu-intranet.hbtn.io/status'
+and displays the response body in a formatted manner. It uses the urllib package
+to make the HTTP request and handle the response.
+
+Usage:
+    Run the script directly to see the output.
+
+Expected Output:
+    The script will print the type of the response, the raw content, and the UTF-8
+    decoded content of the response.
 """
 
 import urllib.request
