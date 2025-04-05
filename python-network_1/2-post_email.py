@@ -2,9 +2,17 @@
 """
 2-post_email.py
 
-This script takes a URL and an email as arguments, sends a POST request
-to the URL with the email as a parameter, and displays the body of the
-response (decoded in utf-8).
+This script takes a URL and an email as command-line arguments, sends a POST
+request to the specified URL with the email as a parameter, and displays the
+body of the response (decoded in UTF-8).
+
+Usage:
+    ./2-post_email.py <URL> <email>
+
+Example:
+    ./2-post_email.py http://0.0.0.0:5000/post_email hr@holbertonschool.com
+
+The server is expected to respond with a message that includes the email sent.
 """
 
 import urllib.request
