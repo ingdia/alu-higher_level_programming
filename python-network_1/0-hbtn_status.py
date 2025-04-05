@@ -2,30 +2,25 @@
 """
 0-hbtn_status.py
 
-This script fetches the status from the URL 'https://alu-intranet.hbtn.io/status'
-and displays the response body in a formatted manner. It uses the urllib package
-to make the HTTP request and handle the response.
+This script fetches the status from the URL https://alu-intranet.hbtn.io/status
+and displays the response body, including the type, content, and UTF-8 content.
 
-Usage:
-    Run the script directly to see the output.
-
-Expected Output:
-    The script will print the type of the response, the raw content, and the UTF-8
-    decoded content of the response.
+The script uses the urllib package to make an HTTP GET request to the specified URL.
+It prints the response in a formatted manner, showing the type of the response,
+the raw content in bytes, and the content decoded in UTF-8.
 """
 
 import urllib.request
 
-def fetch_status():
-    """Fetches the status from the URL and prints the response."""
-    with urllib.request.urlopen('https://alu-intranet.hbtn.io/status') as response:
+if __name__ == "__main__":
+    url = "https://alu-intranet.hbtn.io/status"
+
+    # Use a with statement to open the URL
+    with urllib.request.urlopen(url) as response:
         body = response.read()
 
-    # Display the response in the required format
+    # Display the response details
     print("Body response:")
     print(f"\t- type: {type(body)}")
     print(f"\t- content: {body}")
     print(f"\t- utf8 content: {body.decode('utf-8')}")
-
-if __name__ == "__main__":
-    fetch_status()
