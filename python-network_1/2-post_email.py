@@ -1,36 +1,15 @@
 #!/usr/bin/python3
 """
-2-post_email.py
-
-This script takes a URL and an email as command-line arguments, sends a POST
-request to the specified URL with the email as a parameter, and displays the
-body of the response (decoded in UTF-8).
-
-Usage:
-    ./2-post_email.py <URL> <email>
-
-Example:
-    ./2-post_email.py http://0.0.0.0:5000/post_email hr@holbertonschool.com
-
-The server is expected to respond with a message that includes the email sent.
+A script that sends a POST request with an email as a parameter
+and displays the body of the response (decoded in utf-8).
 """
-
-import urllib.request
-import sys
-
+from sys import argv
+from urllib import parse, request
 
 if __name__ == "__main__":
-    # Get the URL and email from command line arguments
-    url = sys.argv[1]
-    email = sys.argv[2]
-
-    # Prepare the data to be sent in the POST request
-    data = f"email={email}".encode('utf-8')
-
-    # Create a request object
-    request = urllib.request.Request(url, data=data, method='POST')
-
-    # Send the request and handle the response
-    with urllib.request.urlopen(request) as response:
-        body = response.read()
-        print(body.decode('utf-8'))
+    url = argv[1]
+    email = argv[2]
+    data = parse.urlencode({"email": email}).encode()
+    req = request.Request(url, data=data, method="POST")
+    with request.urlopen(req) as response:
+        print(response.read().decode("utf-8"))

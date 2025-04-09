@@ -1,26 +1,15 @@
 #!/usr/bin/python3
-"""
-0-hbtn_status.py
-
-This script fetches the status from the URL https://alu-intranet.hbtn.io/status
-and displays the response body, including the type, content, and UTF-8 content.
-
-The script uses the urllib package to make an HTTP GET request to the specified URL.
-It prints the response in a formatted manner, showing the type of the response,
-the raw content in bytes, and the content decoded in UTF-8.
-"""
-
-import urllib.request
+"""A script that fetches https://alu-intranet.hbtn.io/status
+with the  use of  urllib."""
+from urllib import request
 
 if __name__ == "__main__":
-    url = "https://alu-intranet.hbtn.io/status"
-
-    # Use a with statement to open the URL
-    with urllib.request.urlopen(url) as response:
-        body = response.read()
-
-    # Display the response details
-    print("Body response:")
-    print(f"\t- type: {type(body)}")
-    print(f"\t- content: {body}")
-    print(f"\t- utf8 content: {body.decode('utf-8')}")
+    with request.urlopen(
+            "https://alu-intranet.hbtn.io/status"
+            if "https://intranet.hbtn.io/status".startswith("https")
+            else "https://intranet.hbtn.io/status") as response:
+        html = response.read()
+        print("Body response:")
+        print("\t- type:", type(html))
+        print("\t- content:", html)
+        print("\t- utf8 content:", html.decode("utf-8"))
