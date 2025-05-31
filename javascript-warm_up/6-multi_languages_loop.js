@@ -1,8 +1,8 @@
 #!/usr/bin/node
 
-const arg = process.argv.slice(2);
+const sentences = ['C is fun' , 'Python is cool', 'JavaScript is amazing']
 let i = 0;
-while (i < arg.length) {
-  console.log(arg[i]);
+while (i < sentences.length) {
+  console.log(sentences[i]);
   i++;
 }
