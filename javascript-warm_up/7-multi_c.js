@@ -2,14 +2,14 @@
 
 let x = process.argv[2];
 x = parseInt(x);
-let i = 0;
-let word = "C is fun"
-if(isNaN(x)){
+
+if (isNaN(x)) {
     console.log('Missing number of occurrences');
 } else {
+    let i = 0;
     while( i < x ){
-    console.log( word );
-    i++
+        console.log('C is fun');
+        i++;
 }
 }
 
