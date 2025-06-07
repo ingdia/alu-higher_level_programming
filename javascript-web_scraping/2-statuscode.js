@@ -2,10 +2,8 @@
 
 const request = require('request');
 
-
 const url = process.argv[2];
 
-st
 request(url, (error, response) => {
   if (error) {
     console.error(error);
